@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>: ${TM_GHC:=ghc}
+require_cmd "$TM_GHC"
+
+"$TM_GHC" -O2 -c -ddump-simpl "$TM_FILEPATH" 2&gt;&amp;1 | tail -n +2
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@C</string>
+	<key>name</key>
+	<string>Show Core</string>
+	<key>output</key>
+	<string>openAsNewDocument</string>
+	<key>scope</key>
+	<string>source.haskell</string>
+	<key>uuid</key>
+	<string>F3E0D494-2845-4917-BF3A-A08507974688</string>
+</dict>
+</plist>
