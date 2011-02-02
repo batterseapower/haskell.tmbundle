@@ -6,6 +6,8 @@
 	<array>
 		<string>hs</string>
 	</array>
+	<key>firstLineMatch</key>
+	<string>^(Using\sbinary\spackage\sdatabase|====================\sTidy\sCore|#!/.*\b(runhaskell|runghc)|module\s)</string>
 	<key>keyEquivalent</key>
 	<string>^~H</string>
 	<key>name</key>
